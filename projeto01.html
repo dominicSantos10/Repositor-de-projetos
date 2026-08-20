@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #btn-saiba-mais:hover {
+            background-color: rgb(230, 230, 230);
+            color: black;
+            border: rgb(216, 216, 216)
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div style="min-height: 100vh;">
+        <header style="min-height: 8vh">
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a id="a-pg-1" class="navbar-brand" href="#" style="color: rgb(255, 255, 255);">
+                        <img width="50" height="50"
+                            src="/AULAS/bootstrap/seletorDeProjetos/projeto1/imagens/icons8-cópia-da-pata-do-cão-50.png"
+                            alt="dog-paw-print" />
+                        <strong>Cuidados com animais</strong>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- pg1 -->
+            <section
+                style="min-height:90vh;background-color: antiquewhite; background-image: url('/AULAS/bootstrap/seletorDeProjetos/projeto1/imagens/gatinho.jpg'); background-repeat: no-repeat; background-size: cover;
+            background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <Section
+                    style="display: flex; flex-direction: column; align-items: center; justify-content: center; background-color:rgba(255, 255, 255, 0.5); height: 80vh; width: 100%; text-align:center;">
+
+                    <h1 style=" padding: 10px; border-radius: 15px;">SEU PET PRECISA DE ATENÇÃO NO VERÃO!</h1>
+                    <br>
+                    <p> <strong>Cães e gatos sofrem com o calor excessivo no verão e os cuidados com eles devem ser
+                            ainda maiores. Questões como a alimentação, os passeios, os banhos e os parasitas, por
+                            exemplo, merecem atenção dobrada <br> dos tutores nos dias quentes. Segundo o veterinário
+                            Ricardo Cabral, da Virbac – indústria farmacêutica veterinária, os que mais sofrem são os
+                            cães de focinho curto, os pets com pelagem longa e os que estão acima do peso. <br>
+                            “Independentemente da raça, é muito importante prestar atenção aos sinais que o pet
+                            apresenta indicando que está sofrendo com o calor, como respiração <br> ofegante, boca
+                            aberta, fraqueza ou qualquer comportamento atípico. Caso o tutor identifique qualquer um
+                            desses sintomas, deve procurar pelo médico veterinário”, <br>explica.</p> </strong>
+                    <button id="btn-saiba-mais" type="button" class="btn btn-dark" style="padding: 10px;"><a
+                            style="color: white; text-decoration: none;" href="#pg-2"> SAIBA MAIS</a></button>
+
+                </Section>
+
+            </section>
+
+
+
+
+
+            <!-- pg2 -->
+            <section id="pg-2" style="min-height: 100vh; background-color: rgb(0, 0, 0); display: flex;">
+                <div class="container-fluid">
+                    <div class="row" style="min-height: 100vh;">
+                        <!-- coluna esquerda -->
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-center"
+                            style="background-color: rgb(0, 0, 0);">
+
+                            <div class="card" style="width: 18rem; width: 40vh; margin-top: 60px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">CUIDADOS COM O PET</h5>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">cuidado 1</h6>
+                                    <p class="card-text">É importante manter seu pet hidratado durante todo o dia,
+                                        sempre com água limpa, fresca e disponível. Para isso, pode-se aumentar o número
+                                        de bebedouros pela casa e até dispor de modelos que tenham movimento de água
+                                        para estimular a ingestão e consumo, principalmente de gatos.</p>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">cuidado 2</h6>
+
+                                    <p class="card-text">Recomenda-se que, nos dias quentes os passeios e a prática de
+                                        exercícios sejam realizados nos períodos mais frescos do dia, preferencialmente
+                                        no início da manhã ou no final da tarde, evitando os horários entre as 10h e
+                                        17h. </p>
+                                    <br>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary">cuidado 3</h6>
+                                    <p class="card-text">Banhos são sempre refrescantes e uma ótima saída para
+                                        proporcionar mais conforto nos dias quentes, por isso, adote uma rotina de
+                                        banhos regulares para o seu pet. Além disso, mantenha-o tosado, mas tendo sempre
+                                        o cuidado para controlar o comprimento dos pelos, evitando exageros, pois o pet
+                                        pode ter queimaduras solares em algumas regiões se não tiver a proteção adequada
+                                        através de sua pelagem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- clona direita -->
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-center; text-align: center"
+                            style="background-color: rgb(46, 46, 46);">
+                            <br><br>
+                            <h2 style="color: azure; text-align: center;">Principais impactos do El Nino nos pets</h2>
+                            <hr>
+                            <div class="list-group">
+
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-danger">Estressse
+                                    térmico</a>
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-warning">Desidratação
+                                    e insolação</a>
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-danger">Problemas
+                                    respiratórios</a>
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-warning">Proliferação
+                                    de parasitas</a>
+                            </div>
+                            <br>
+                            <div class="list-group">
+
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-danger">Transpiração
+                                    excessiva</a>
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-warning">Estresse e
+                                    pânico</a>
+                                <a href="" class="list-group-item list-group-item-action list-group-item-danger">Doenças
+                                    de pele e leptospirose</a>
+                                <a href="" class="list-group-item list-group-item-action list-group-item-warning">Queda
+                                    na rotina</a>
+                            </div>
+                            <br>
+                            <div class="list-group">
+
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-danger">Transpiração
+                                    excessiva</a>
+                                <a href=""
+                                    class="list-group-item list-group-item-action list-group-item-warning">Estresse e
+                                    pânico</a>
+                                <a href="" class="list-group-item list-group-item-action list-group-item-danger">Doenças
+                                    de pele e leptospirose</a>
+                                <a href="" class="list-group-item list-group-item-action list-group-item-warning">Queda
+                                    na rotina</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!--pg3 -->
+            <section class="d-flex justify-content-center alighn-itens-center flex-column"
+                style="min-height: 100vh; background-color: black;">
+
+                <h1 style="color:aliceblue">Gostaria de mais informações? Nos contate</h1>
+                <br>
+                <form style="color:aliceblue">
+                    <fieldset disabled>
+                        <legend>Formulário</legend>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">email</label>
+                            <input type="text" id="disabledTextInput" class="form-control"  placeholder="email@example.com">
+                        
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledSelect" class="form-label">Nome</label>
+                            <select id="disabledSelect" class="form-select">
+                                <option>Digite seu nome</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                               
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </fieldset>
+                </form>
+
+            </section>
+        </main>
+        <footer class="mt-auto" style="min-height: 10vh; background-color: rgb(29, 29, 29); display: flex; align-items: center; text-align: center; justify-content: center;">
+            <p style="color: aliceblue; text-align: center; justify-content: center; ;"> DESENVOLVIMENTO DE SISTEMAS 2026</p>
+        </footer>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

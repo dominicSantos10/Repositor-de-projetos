@@ -1,0 +1,557 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portifólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="../imagens/">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            background-color: #000;
+            
+        }
+
+        .imagem {
+            height: 7vh;
+            width: 10vh;
+            border: 1px solid rgb(129, 0, 0);
+            border-radius: 8px;
+        }
+
+        .imga {
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+            margin-right: 5px;
+        }
+
+        h4 {
+            color: #fff;
+        }
+
+        p {
+            color: #ac8282;
+        }
+
+        .linha {
+            background-color: rgb(121, 5, 5);
+            width: 100%;
+            height: 2px;
+        }
+
+        .portfolio-main {
+            min-height: 100vh;
+            background-image: url('../imagens/backshop (1920 x 1800 px).png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+        }
+
+        .produtos-container {
+            background-color: #000;
+            width: 60%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+
+        .titulo-produtos {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .titulo-texto {
+            width: 50%;
+            padding: 20px 5% 0;
+        }
+
+        .titulo-texto h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .titulo-linha {
+            background-color: rgb(121, 5, 5);
+            width: 80%;
+            height: 2px;
+            margin-top: 10px;
+        }
+
+        .titulo-texto h6 {
+            color: #c20000;
+            margin-top: 20px;
+        }
+
+        .logo-produtos {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10%;
+        }
+
+        .logo-produtos img {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+        }
+
+        .produtos-grid {
+            margin-top: 30px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 3%;
+        }
+
+        .produto-card {
+            background-image: radial-gradient(circle, #340000, #2a0205, #210106, #150105, #000);
+            border: 1px solid rgb(54, 0, 0);
+            min-height: 350px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .produto-imagem {
+            width: 80%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .produto-imagem img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .produto-card h4 {
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 0 0 5px;
+        }
+
+        .produto-card p {
+            text-align: center;
+            margin: 0 0 12px;
+            font-size: .9rem;
+        }
+
+        .produto-card button {
+            margin-top: auto;
+        }
+
+        .footer-info {
+            min-height: 40vh;
+            width: 100%;
+            background-image: url('../imagens/background02.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 5%;
+        }
+
+        .footer-content {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-coluna {
+            flex: 1;
+            min-width: 0;
+            color: azure;
+        }
+
+        .footer-coluna h4 {
+            color: rgb(175, 0, 0);
+            margin-bottom: 15px;
+        }
+
+        .footer-coluna p {
+            line-height: 1.6;
+        }
+
+        .footer-coluna ul {
+            margin: 0;
+        }
+
+        .redes {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .redes img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .footer-final {
+            min-height: 4vh;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .footer-final p {
+            color: rgb(102, 102, 102);
+            text-align: center;
+            margin: 0;
+        }
+
+        @media(max-width:1200px) {
+            .produtos-container {
+                width: 75%;
+            }
+        }
+
+        @media(max-width:992px) {
+            .produtos-container {
+                width: 90%;
+            }
+
+            .produtos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                flex-wrap: wrap;
+            }
+
+            .footer-coluna {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media(max-width:768px) {
+            .portfolio-main {
+                padding: 25px 10px;
+            }
+
+            .produtos-container {
+                width: 100%;
+            }
+
+            .titulo-produtos {
+                flex-direction: column;
+            }
+
+            .titulo-texto {
+                width: 100%;
+                padding: 20px 8% 0;
+            }
+
+            .titulo-texto h1 {
+                font-size: 1.8rem;
+            }
+
+            .titulo-linha {
+                width: 100%;
+            }
+
+            .logo-produtos {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 15px 8%;
+            }
+
+            .logo-produtos img {
+                height: 55px;
+                width: 55px;
+            }
+
+            .produtos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 8%;
+            }
+
+            .produto-card {
+                min-height: 380px;
+            }
+
+            .produto-imagem {
+                height: 220px;
+                width: 85%;
+            }
+
+            .footer-info {
+                min-height: auto;
+                padding: 50px 8%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-coluna {
+                width: 100%;
+            }
+
+            .redes {
+                gap: 15px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .portfolio-main {
+                padding: 15px 5px;
+            }
+
+            .titulo-texto {
+                padding: 15px 6% 0;
+            }
+
+            .titulo-texto h1 {
+                font-size: 1.5rem;
+            }
+
+            .titulo-texto h6 {
+                font-size: .9rem;
+            }
+
+            .logo-produtos {
+                padding: 10px 6%;
+            }
+
+            .logo-produtos img {
+                height: 50px;
+                width: 50px;
+            }
+
+            .produtos-grid {
+                padding: 0 5%;
+                gap: 15px;
+            }
+
+            .produto-card {
+                min-height: 340px;
+                padding: 12px;
+            }
+
+            .produto-imagem {
+                height: 190px;
+                width: 85%;
+            }
+
+            .produto-card h4 {
+                font-size: 1rem;
+            }
+
+            .produto-card p {
+                font-size: .8rem;
+            }
+
+            .footer-info {
+                padding: 40px 6%;
+            }
+
+            .footer-coluna h4 {
+                font-size: 1.1rem;
+            }
+
+            .footer-coluna p,
+            .footer-coluna li {
+                font-size: .9rem;
+            }
+
+            .redes img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">≣
+                    Menu</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../código/index.html">Home</a>
+                        <a class="nav-link" href="../código/shop.html">Shop</a>
+                        <a class="nav-link" href="../código/contato.html">Contate-nos</a>
+                        <a class="nav-link" href="../código/portifolio.html">Portifólio</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+            <div class="offcanvas-header">
+                <h4 style="color:rgb(187,1,1);"><img height="40" width="50" src="../imagens/aranha.png" alt="">RADIATA
+                </h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <hr>
+                <ul class="nav nav-pills flex-column gap-2">
+                    <li class="nav-item"><a href="../código/index.html" class="nav-link active"><img class="imga"
+                                src="../imagens/icons8-casa-48.png" alt="">Home</a></li>
+                    <li><a href="../código/shop.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-search-48.png" alt="">Shop</a></li>
+                    <li><a href="../código/contato.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-profile-48.png" alt="">Nos Contate</a></li>
+                    <li><a href="../código/portifolio.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-folder-48.png" alt="">Portifólio</a></li>
+                    <li><a href="../código/historia.html" class="nav-link text-white"><img class="imga"
+                                src="https://img.icons8.com/deco-glyph/48/FA5252/book.png" alt="Livro">História</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="linha"></div>
+    <main class="portfolio-main">
+        <section class="produtos-container">
+            <div class="titulo-produtos">
+                <div class="titulo-texto">
+                    <h1>COMPRAS</h1>
+                    <div class="titulo-linha"></div>
+                    <h6>Conheça nossos produtos!</h6>
+                </div>
+                <div class="logo-produtos"><img src="../imagens/aranha.jpeg" alt="Logo Radiata"></div>
+            </div>
+            <div class="produtos-grid">
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/amigurumi.png" alt="Amigurumi"></div>
+                    <h4>Amigurumi 20cm</h4>
+                    <p>qualquer personagem da série</p>
+                    <button type="button" class="btn btn-danger">R$99,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/3.png" alt="Moltem RADIATA"></div>
+                    <h4>Moltem RADIATA</h4>
+                    <p>100% algodão, pp ao gg</p>
+                    <button type="button" class="btn btn-danger">R$239,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/4.png" alt="Quadro RADIATA"></div>
+                    <h4>Quadro RADIATA</h4>
+                    <p>30cm, ilustração em HD</p>
+                    <button type="button" class="btn btn-danger">R$49,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/5.png" alt="Livro RADIATA edição luxo branco">
+                    </div>
+                    <h4>Livro 1 - RADIATA edição luxo</h4>
+                    <p>532 páginas, capa dura, BRANCO</p>
+                    <button type="button" class="btn btn-danger">R$139,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/6.png" alt="Livro RADIATA edição luxo preto"></div>
+                    <h4>Livro 1 - RADIATA edição luxo</h4>
+                    <p>532 páginas, capa dura, PRETO</p>
+                    <button type="button" class="btn btn-danger">R$139,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/7.png" alt="Blusa manga curta"></div>
+                    <h4>Blusa manga curta</h4>
+                    <p>100% algodão, pp ao gg</p>
+                    <button type="button" class="btn btn-danger">R$39,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/8.png" alt="Narciso Amarelo"></div>
+                    <h4>Narciso Amarelo</h4>
+                    <p>linha amigurumi, 25cm</p>
+                    <button type="button" class="btn btn-danger">R$59,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/9.png" alt="Lírio Aranha Vermelho"></div>
+                    <h4>Lírio Aranha Vermelho</h4>
+                    <p>linha amigurumi, 25cm</p>
+                    <button type="button" class="btn btn-danger">R$59,99</button>
+                </section>
+                <section class="produto-card">
+                    <div class="produto-imagem"><img src="../imagens/10.png" alt="Sketchbook RADIATA"></div>
+                    <h4>SKETCHBOOK RADIATA</h4>
+                    <p>papel pólen, 90 folhas</p>
+                    <button type="button" class="btn btn-danger">R$59,99</button>
+                </section>
+            </div>
+        </section>
+    </main>
+    <section class="footer-info">
+        <div class="footer-content">
+            <div class="footer-coluna">
+                <h4>RADIATA WIKI</h4>
+                <p>Uma enciclopédia online sobre o universo do projeto RADIATA. Aqui há de tudo! Desde artigos até
+                    desenhos e fanarts! :D</p>
+            </div>
+            <div class="footer-coluna">
+                <h4>NAVEGAÇÃO</h4>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Página inicial</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● História</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Personagens</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Locais (EM BREVE)</li>
+                </ul>
+            </div>
+            <div class="footer-coluna">
+                <h4>COMO CONTRIBUIR?</h4>
+                <p>Quer contribuir com teorias, fanarts ou fanfics?<br>Siga o botão abaixo:</p>
+                <a href="../código/contato.html"><button type="button" class="btn btn-danger">🗫 Como
+                        contribuir</button></a>
+            </div>
+            <div class="footer-coluna">
+                <h4>Nos siga nas redes!</h4>
+                <div class="redes">
+                    <img src="https://img.icons8.com/ios/50/FA5252/youtube-play--v1.png" alt="YouTube">
+                    <img src="https://img.icons8.com/windows/32/FA5252/instagram-new.png" alt="Instagram">
+                    <img src="https://img.icons8.com/ios/50/FA5252/twitter--v1.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="linha" style="background-color:rgb(49,49,49);"></div>
+    <footer class="footer-final">
+        <p>@2026 Radiata Official Wiki. Todos os direitos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nos Contate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', serif;
+            background-color: #000;
+            overflow-x: hidden;
+        }
+
+        label {
+            color: rgb(155, 137, 115);
+        }
+
+        .imagem {
+            height: 7vh;
+            width: 10vh;
+            border: 1px solid rgb(129, 0, 0);
+            border-radius: 8px;
+        }
+
+        .imga {
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+            margin-right: 5px;
+        }
+
+        .contato-main {
+            min-height: 91vh;
+            display: flex;
+            width: 100%;
+        }
+
+        .contato-imagem {
+            width: 50%;
+            min-height: 91vh;
+            background-color: #000;
+        }
+
+        .contato-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .contato-conteudo {
+            width: 50%;
+            min-height: 91vh;
+            background-color: #c9c3b4;
+            padding-bottom: 40px;
+        }
+
+        .logo-contato {
+            width: 100%;
+            height: 15%;
+            min-height: 100px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .logo-contato img {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 10%;
+        }
+
+        .texto-contato {
+            width: 100%;
+            padding: 0 10%;
+        }
+
+        .texto-contato h3 {
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
+        }
+
+        .texto-contato h6 {
+            line-height: 1.5;
+        }
+
+        .formulario {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8%;
+            padding: 0 5%;
+        }
+
+        .formulario form {
+            width: 100%;
+        }
+
+        .formulario fieldset {
+            border: 1px solid #c90f0f;
+            width: 80%;
+            max-width: 600px;
+            background-color: #000;
+            padding: 25px;
+            border-radius: 20px;
+        }
+
+        .formulario input,
+        .formulario textarea {
+            width: 100%;
+        }
+
+        .formulario textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .formulario button {
+            margin-top: 5px;
+        }
+
+        .footer-info {
+            min-height: 40vh;
+            width: 100%;
+            background-image: url(../imagens/background02.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 5%;
+        }
+
+        .footer-content {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-coluna {
+            flex: 1;
+            min-width: 0;
+            color: azure;
+        }
+
+        .footer-coluna h4 {
+            color: rgb(175, 0, 0);
+            margin-bottom: 15px;
+        }
+
+        .footer-coluna p {
+            line-height: 1.6;
+        }
+
+        .footer-coluna ul {
+            margin: 0;
+        }
+
+        .redes {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .redes img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .footer-final {
+            min-height: 4vh;
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .footer-final p {
+            color: rgb(102, 102, 102);
+            text-align: center;
+            margin: 0;
+        }
+
+        @media(max-width:992px) {
+            .contato-main {
+                min-height: auto;
+            }
+
+            .contato-imagem {
+                width: 45%;
+                min-height: 850px;
+            }
+
+            .contato-conteudo {
+                width: 55%;
+                min-height: auto;
+            }
+
+            .formulario fieldset {
+                width: 90%;
+            }
+
+            .footer-content {
+                flex-wrap: wrap;
+            }
+
+            .footer-coluna {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media(max-width:768px) {
+            .navbar .container-fluid {
+                padding: 10px;
+            }
+
+            .contato-main {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .contato-imagem {
+                width: 100%;
+                height: 45vh;
+                min-height: 300px;
+            }
+
+            .contato-conteudo {
+                width: 100%;
+                min-height: auto;
+                padding-bottom: 50px;
+            }
+
+            .logo-contato {
+                height: auto;
+                min-height: 100px;
+            }
+
+            .logo-contato img {
+                margin-left: 8%;
+                height: 60px;
+                width: 60px;
+            }
+
+            .texto-contato {
+                padding: 0 8%;
+            }
+
+            .texto-contato h3 {
+                font-size: 1.25rem;
+            }
+
+            .texto-contato h6 {
+                font-size: .9rem;
+            }
+
+            .formulario {
+                margin-top: 40px;
+                padding: 0 5%;
+            }
+
+            .formulario fieldset {
+                width: 100%;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .footer-info {
+                min-height: auto;
+                padding: 50px 8%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-coluna {
+                width: 100%;
+            }
+
+            .redes {
+                gap: 15px;
+            }
+        }
+
+        @media(max-width:480px) {
+            .contato-imagem {
+                height: 35vh;
+                min-height: 230px;
+            }
+
+            .logo-contato img {
+                margin-left: 6%;
+                width: 55px;
+                height: 55px;
+            }
+
+            .texto-contato {
+                padding: 0 6%;
+            }
+
+            .texto-contato h3 {
+                font-size: 1.1rem;
+            }
+
+            .texto-contato h6 {
+                font-size: .85rem;
+            }
+
+            .formulario {
+                padding: 0 4%;
+            }
+
+            .formulario fieldset {
+                padding: 15px;
+            }
+
+            .footer-info {
+                padding: 40px 6%;
+            }
+
+            .footer-coluna h4 {
+                font-size: 1.1rem;
+            }
+
+            .footer-coluna p,
+            .footer-coluna li {
+                font-size: .9rem;
+            }
+
+            .redes img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">≣
+                    Menu</button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../código/index.html">Home</a>
+                        <a class="nav-link" href="../código/shop.html">Shop</a>
+                        <a class="nav-link" href="../código/contato.html">Contate-nos</a>
+                        <a class="nav-link" href="../código/portifolio.html">Portifólio</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebar">
+            <div class="offcanvas-header">
+                <h4 style="color:rgb(187,1,1);"><img height="40" width="50" src="../imagens/aranha.png" alt="">RADIATA
+                </h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <hr>
+                <ul class="nav nav-pills flex-column gap-2">
+                    <li class="nav-item"><a href="../código/index.html" class="nav-link active"><img class="imga"
+                                src="../imagens/icons8-casa-48.png" alt="">Home</a></li>
+                    <li><a href="../código/shop.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-search-48.png" alt="">Shop</a></li>
+                    <li><a href="../código/contato.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-profile-48.png" alt="">Nos Contate</a></li>
+                    <li><a href="../código/portifolio.html" class="nav-link text-white"><img class="imga"
+                                src="../imagens/icons8-folder-48.png" alt="">Portifólio</a></li>
+                    <li><a href="../código/historia.html" class="nav-link text-white"><img class="imga"
+                                src="https://img.icons8.com/deco-glyph/48/FA5252/book.png" alt="Livro">História</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div style="background-color:rgb(68,68,68);width:100%;height:2px;"></div>
+    <main class="contato-main">
+        <div class="contato-imagem"><img src="../imagens/contato.png" alt="Imagem da página de contato"></div>
+        <div class="contato-conteudo">
+            <div class="logo-contato"><img src="../imagens/aranha.jpeg" alt="Logo Radiata"></div>
+            <div class="texto-contato">
+                <h3>QUE BOM QUE CHEGOU ATÉ AQUI!</h3>
+                <h6>Nos contate pelo email:<br>@RadiataOfficialWiki@gmail.com<br><br>ou envie sua dúvida diretamente
+                    pelo questionário abaixo:</h6>
+            </div>
+            <div class="formulario">
+                <form>
+                    <fieldset>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" id="nome" class="form-control" placeholder="Digite seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="duvida" class="form-label">Digite sua dúvida</label>
+                            <textarea id="duvida" class="form-control" placeholder="Digite sua dúvida"></textarea>
+                        </div>
+                        <button type="reset" class="btn btn-danger">Enviar!</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <section class="footer-info">
+        <div class="footer-content">
+            <div class="footer-coluna">
+                <h4>RADIATA WIKI</h4>
+                <p>Uma enciclopédia online sobre o universo do projeto RADIATA. Aqui há de tudo! Desde artigos até
+                    desenhos e fanarts! :D</p>
+            </div>
+            <div class="footer-coluna">
+                <h4>NAVEGAÇÃO</h4>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Página inicial</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● História</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Personagens</li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">● Locais (EM BREVE)</li>
+                </ul>
+            </div>
+            <div class="footer-coluna">
+                <h4>COMO CONTRIBUIR?</h4>
+                <p>Quer contribuir com teorias, fanarts ou fanfics?<br>Siga o botão abaixo:</p>
+                <a href="../código/contato.html"><button type="button" class="btn btn-danger">🗫 Como
+                        contribuir</button></a>
+            </div>
+            <div class="footer-coluna">
+                <h4>Nos siga nas redes!</h4>
+                <div class="redes">
+                    <img src="https://img.icons8.com/ios/50/FA5252/youtube-play--v1.png" alt="YouTube">
+                    <img src="https://img.icons8.com/windows/32/FA5252/instagram-new.png" alt="Instagram">
+                    <img src="https://img.icons8.com/ios/50/FA5252/twitter--v1.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="background-color:rgb(49,49,49);width:100%;height:2px;"></div>
+    <footer class="footer-final">
+        <p>@2026 Radiata Official Wiki. Todos os direitos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+</html>

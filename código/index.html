@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Radiata Wiki</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Ícone -->
+    <link rel="icon" type="image/x-icon" href="../imagens/aranha.png">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: 'Cinzel', serif;
+            background-color: black;
+        }
+
+        img{
+            height: 30px;
+            width: 30px;
+        }
+
+        a{
+            color: brown;
+        }
+
+        header{
+            background-color: black;
+        }
+
+        .sidebar{
+            width: 280px;
+        }
+
+        .sidebar-titulo{
+            color: rgb(187, 1, 1);
+            margin-top: 10px;
+        }
+        .inicio{
+            min-height: 60vh;
+
+            background-image: url("../imagens/Design sem nome.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 5vh;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+        .carde{
+            border-radius: 15px;
+        }
+
+        .card-inicio{
+            width: 18rem;
+            margin-bottom: 1%;
+            margin-top: 10%;
+        }
+        .conteudo-secundario{
+            min-height: 45vh;
+
+            background-image:
+                radial-gradient(circle,
+                    #2a2a2a,
+                    #212121,
+                    #191919,
+                    #0f0f0f,
+                    #000000);
+
+            display: flex;
+
+            padding: 30px 5%;
+        }
+
+        .artigos{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .atualizacoes{
+            width: 50%;
+        }
+
+        .imagem{
+            height: 7vh;
+            width: 10vh;
+
+            border: 1px solid rgb(129, 0, 0);
+            border-radius: 8px;
+
+            object-fit: cover;
+        }
+
+        .artigo{
+            display: flex;
+            align-items: center;
+        }
+
+        .texto-artigo{
+            margin-left: 10px;
+            color: aliceblue;
+        }
+
+        .frase{
+            min-height: 10vh;
+            width: 100%;
+            background-color: brown;
+            background-image:
+                url("../imagens/Assim nasceu um narciso em meio as mágoas dos meus lírios.png");
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: aliceblue;
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .navegacao{
+            min-height: 40vh;
+            width: 100%;
+            background-image: url("../imagens/background02.png");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 5%;
+        }
+
+        .navegacao-conteudo{
+            display: flex;
+            gap: 5vh;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .navegacao-bloco{
+            width: 250px;
+            color: azure;
+        }
+
+        .titulo-vermelho{
+            color: rgb(175, 0, 0);
+        }
+
+        .redes {
+            display: flex;
+            gap: 2vh;
+        }
+
+
+   
+
+        .linha{
+            background-color: rgb(49, 49, 49);
+            width: 100%;
+            height: 2px;
+        }
+
+
+    
+        footer{
+            min-height: 4vh;
+            width: 100%;
+
+            background-color: #000000;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer p{
+            color: rgb(102, 102, 102);
+            text-align: center;
+        }
+
+
+        /*RESPONSIVIDADE*/
+
+        @media (max-width: 768px) {
+
+            .inicio {
+                flex-direction: column;
+                min-height: auto;
+                padding: 40px 20px;
+                gap: 20px;
+            }
+
+            .card-inicio {
+                width: 100%;
+                max-width: 18rem;
+                margin-bottom: 0;
+            }
+
+            .conteudo-secundario {
+                display: block;
+                min-height: auto;
+                padding: 30px 20px;}
+
+            .artigos {
+                width: 100%;
+            }
+
+            .atualizacoes {
+                width: 100%;
+
+                margin-top: 40px;
+            }
+
+            .artigo {
+                width: 100%;
+            }
+
+            .imagem {
+                width: 70px;
+                height: 60px;
+
+                flex-shrink: 0;
+            }
+
+
+            .frase {
+                min-height: 15vh;
+
+                padding: 20px;
+            }
+
+            .frase p {
+                font-size: 14px}
+
+
+            .navegacao {
+                min-height: auto;
+                padding: 40px 20px;
+            }
+
+            .navegacao-conteudo {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+            }
+
+            .navegacao-bloco {
+                width: 100%;
+                max-width: 350px;
+            }
+
+
+            .redes {
+                justify-content: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .card-inicio {
+                max-width: 100%;
+            }
+
+            .texto-artigo {
+                font-size: 14px;
+            }
+
+            .atualizacoes li {
+                font-size: 14px;
+            }
+
+            .frase p {
+                font-size: 13px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+        <nav class="navbar-expand-lg navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- Botão da sidebar -->
+
+                <button class="btn btn-primary btn-dark" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar">
+                    ≣ Menu
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="../código/index.html">
+                            Home
+                        </a>
+                        <a class="nav-link" href="../código/shop.html">
+                            Shop
+                        </a>
+                        <a class="nav-link" href="../código/contato.html">
+                            Contate-nos
+                        </a>
+                        <a class="nav-link" href="../código/portifolio.html">
+                            Portifólio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start bg-dark text-white sidebar" tabindex="-1" id="sidebar">
+            <div class="offcanvas-header">
+                <h4 class="sidebar-titulo">
+                    <img src="../imagens/aranha.png" alt="Logo">
+                    RADIATA
+                </h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas">
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+
+                    <li class="nav-item">
+                        <a href="../código/index.html" class="nav-link active">
+
+                            <img src="../imagens/icons8-casa-48.png" alt="">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../código/shop.html" class="nav-link text-white">
+                            <img src="../imagens/icons8-search-48.png" alt="">
+                            Shop
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../código/contato.html" class="nav-link text-white">
+                            <img src="../imagens/icons8-profile-48.png" alt="">
+                            Nos Contate
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="../código/portifolio.html" class="nav-link text-white">
+                            <img src="../imagens/icons8-folder-48.png" alt="">
+                            Portifólio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../código/historia.html" class="nav-link text-white">
+                            <img src="https://img.icons8.com/deco-glyph/48/FA5252/book.png" alt="book">
+                            História
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main class="inicio">
+        <!-- História -->
+
+        <div class="card text-bg-dark card-inicio">
+            <div class="card-body text-center">
+                <p>
+                    <img src="https://img.icons8.com/parakeet-partial-filled/48/FA5252/open-book.png" alt="open-book">
+                </p>
+                <h5 class="card-title">
+                    História
+                </h5>
+                <p class="card-text">
+
+                    Eventos que moldaram nossa história!
+                    Desde a queda dos anjos até os dias atuais.
+                </p>
+                <a href="../código/historia.html" class="card-link" style="text-decoration: none;">
+                    Explorar! ➠
+                </a>
+            </div>
+        </div>
+        <!-- Personagens -->
+        <div class="card text-bg-dark card-inicio">
+            <div class="card-body text-center">
+                <p>
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/gender-neutral-user.png"
+                        alt="gender-neutral-user">
+                </p>
+                <h5 class="card-title">
+                    Personagens
+                </h5>
+                <p class="card-text">
+                    Conheçam os rostos que deram vida à
+                    Radiata! Anjos, demônios, pecadores e muito mais!
+                </p>
+                <a href="../código/carregando.html" class="card-link" style="text-decoration: none;">
+                    Explorar! ➠
+                </a>
+            </div>
+        </div>
+
+        <!-- Solasta -->
+
+        <div class="card text-bg-dark card-inicio">
+            <div class="card-body text-center">
+                <p>
+                    <img src="https://img.icons8.com/ios-filled/50/FA5252/quill-with-ink.png" alt="quill-with-ink">
+                </p>
+                <h5 class="card-title">
+                    Solasta
+                </h5>
+                <p class="card-text">
+                    Entenda a hierarquia, as leis e os
+                    mistérios do domínio governado por
+                    Lúcifer e seus herdeiros.
+                </p>
+                <a href="../código/SOLASTA.html" class="card-link" style="text-decoration: none;">
+
+                    Explorar! ➠
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- LINHA -->
+
+    <div class="linha"></div>
+
+
+    <main class="conteudo-secundario">
+
+        <!-- ARTIGOS -->
+        <div class="artigos">
+            <h3 style="color: aliceblue;">
+                Artigos em destaque
+            </h3>
+            <hr style="color: rgb(240, 0, 0);">
+           
+            <div class="artigo">
+
+                <img class="imagem" src="../imagens/lírio.jpg" alt="Lírio">
+
+                <p class="texto-artigo">
+
+                    Lycoris Radiata
+                    <br>
+                    Como o orgulho dos anjos se transformou
+                    em rebelião e deu origem ao inferno.
+
+                </p>
+            </div>
+
+            <hr style="color: rgb(240, 0, 0);">
+
+            
+            <div class="artigo">
+                <img class="imagem" src="../imagens/interno.jpg" alt="Narciso">
+                <p class="texto-artigo">
+                    Narcissus pseudonarcissus
+                    <br>
+                    O significado da flor que simboliza
+                    pecado, morte e esperança.
+                </p>
+            </div>
+            <hr style="color: rgb(240, 0, 0);">
+           
+            <div class="artigo">
+                <img class="imagem" src="../imagens/neve.jpg" alt="Neve">
+                <p class="texto-artigo">
+                    Os Pactos
+                    <br>
+                    O que são pactos?
+                    Regras, custos e as consequências
+                    de quebrá-los.
+                </p>
+            </div>
+        </div>
+
+        <!-- ATUALIZAÇÕES -->
+        <div class="atualizacoes">
+
+            <h3 style="
+          color: aliceblue;
+          margin-top: 15px;
+          margin-bottom: 19px;
+        ">
+
+                Últimas atualizações
+
+            </h3>
+
+            <hr style="color: rgb(241, 4, 4);">
+            <ul class="list-group">
+                <li class="list-group-item bg-transparent text-danger border-dark">
+
+                    ● 25/08/2026 ➤ Hospedagem das páginas
+                    de personagens
+
+                </li>
+                <br>
+
+                <li class="list-group-item bg-transparent text-danger border-dark">
+
+                    ● 25/08/2026 ➤ Nova categoria:
+                    Solasta
+
+                </li>
+                <br>
+                <li class="list-group-item bg-transparent text-danger border-dark">
+                    ● 25/08/2026 ➤ Página "Home"
+                    atualizada
+                </li>
+                <br>
+                <li class="list-group-item bg-transparent text-danger border-dark">
+
+                    ● 25/08/2026 ➤ Galeria de personagens
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- LINHA -->
+
+    <div class="linha"></div>
+    <main class="frase">
+        <p>
+            "Assim nasceu um narciso em meio às mágoas
+            dos meus lírios"
+        </p>
+        <p>
+            - 𝒮𝒽𝒾𝓇ℴ 𝓂ℴ𝓇ℊℯ𝓃𝓈𝓉ℯ𝓇𝓃
+        </p>
+    </main>
+    <div class="linha"></div>
+    <main class="navegacao">
+        <div class="navegacao-conteudo">
+
+            <div class="navegacao-bloco">
+
+                <h4 class="titulo-vermelho">
+                    RADIATA WIKI
+                </h4>
+                <p>
+Uma enciclopédia online sobre o universo
+                    do projeto RADIATA.
+
+                    Aqui há de tudo!
+                    Desde artigos até desenhos e fanarts! :D
+                </p>
+            </div>
+            <div class="navegacao-bloco">
+                <h4 class="titulo-vermelho">
+                    NAVEGAÇÃO
+                </h4>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent text-danger border-dark">
+                        ● Página inicial
+                    </li>
+                    <li class="list-group-item bg-transparent text-danger border-dark">
+                        ● História
+                    </li>
+
+                    <li class="list-group-item bg-transparent text-danger border-dark">
+                        ● Personagens
+                    </li>
+
+                    <li class="list-group-item bg-transparent text-danger border-dark">
+                        ● Locais (EM BREVE)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navegacao-bloco">
+                <h4 class="titulo-vermelho">
+                    COMO CONTRIBUIR?
+                </h4>
+                <p>
+                    Quer contribuir com teorias, fanarts
+                    ou fanfics?
+                    <br>
+                    Siga o botão abaixo:
+                </p>
+                <a href="../código/contato.html">
+                    <button type="button" class="btn btn-danger">
+                        🗫 Como contribuir
+                    </button>
+                </a>
+            </div>
+            <div class="navegacao-bloco">
+                <h4 class="titulo-vermelho">
+                    Nos siga nas redes!
+                </h4>
+                <div class="redes">
+
+                    <img src="https://img.icons8.com/ios/50/FA5252/youtube-play--v1.png" alt="Youtube">
+                    <img src="https://img.icons8.com/windows/32/FA5252/instagram-new.png" alt="Instagram">
+                    <img src="https://img.icons8.com/ios/50/FA5252/twitter--v1.png" alt="Twitter">
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="linha"></div>
+    <footer>
+        <p>
+            @2026 Radiata Official Wiki.
+            Todos os direitos reservados
+        </p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
